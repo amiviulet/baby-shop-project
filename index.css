@@ -69,44 +69,49 @@ color: black;
   transition: ease-in;
 }
 
-#home-page-slider {
-    padding-bottom: 25px;
+.slider-item {
+position: relative;
+height: 700px;
+width: 100%;
+background-repeat: no-repeat;
+background-size: cover;
 }
-
-.carousel-caption {
-    background-color: rgba(107, 149, 179, 0.514);
-    z-index: 10;
-    padding: 5px 5px;
-    color: black;
-    text-align: center;
-    font-size: 36px;
-    width: 40%
-}
-
-@media screen and (max-width: 1024px) {
-    .carousel-caption{
-        padding: 5px 5px;
-        color: black;
-        text-align: center;
-        font-size: 14px !important;
-    }
-}
-
-#carousel-button {
-    margin: 0;
-    padding: 5px;
-    background-color: #94c7eb;
-    box-shadow: 0 2px 1px #1a161e;
-    border-radius: 50px;
-    font-size: 12px;
+.item-caption {
+    background-color:rgba(159, 203, 221, 0.473);
+    font-size: 3rem;
     font-weight: 700;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    height: 40%;
+    width: 40%;
+    border-radius: 10%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
 }
-
-@media screen and (max-width: 1024px) {
-    #carousel-button {
-        font-size: 6px;
+@media only screen and (max-width: 1024px){
+    .item-caption {
+        font-size: 2rem;
+        height: 30%;
+        padding: 10px
+    }
+    .slider-item{
+        height: 350px;
     }
 }
+@media only screen and (max-width: 416px){
+    .item-caption {
+        font-size: 1rem;
+        height: 30%;
+        padding: 10px
+    }
+    .slider-item{
+    height: 200px;
+    }
+}
+
 
 #current-offers{
     max-width: 100%;
