@@ -81,7 +81,7 @@ background-size: cover;
     font-size: 3rem;
     font-weight: 700;
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     height: 40%;
     width: 40%;
     border-radius: 10%;
@@ -91,59 +91,91 @@ background-size: cover;
     left: 50%;
     transform: translate(-50%, -50%)
 }
+.slider-button{
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #94c7eb;
+    border-radius: 10px;
+    border: 1px solid #94c7eb;
+    box-shadow: 1px 2px #242424;
+}
+.slider-button:hover {
+    border: 1px solid #ff7d95;
+    background-color: #ff7d95
+}
+
 @media only screen and (max-width: 1024px){
     .item-caption {
         font-size: 2rem;
-        height: 30%;
+        height: 50%;
         padding: 10px
     }
     .slider-item{
         height: 350px;
     }
+    .slider-button{
+        font-size: 10px;
+    }
 }
 @media only screen and (max-width: 416px){
     .item-caption {
         font-size: 1rem;
-        height: 30%;
+        height: 50%;
         padding: 10px
     }
     .slider-item{
     height: 200px;
     }
-}
-
-
-#current-offers{
-    max-width: 100%;
-    margin: 10px 10px;
-    margin-bottom: 20px;
-}
-
-.showcase-item, 
-.showcase-item h5{
-    font-weight: 600;
-    font-size: 30px;
-    transition: transform .2s;
-    text-shadow: 0.2px 0.5px rgb(0, 0, 0);
-    border-radius: 0;
-}
-@media screen and (max-width:1024px){
-    .showcase-item,
-    .showcase-item h5 {
-        font-size: 20px;
+    .slider-button{
+        font-size: 8px;
+        padding: 2.5px 5px;
     }
 }
-.showcase-item a{
-    text-decoration: underline;
-    color: #343a40;
-}
-.showcase-item a:hover {
-    color: #ff7d95;
+
+.offer-showcase{
+    display: flex;
+    margin: 0 10px;
+    overflow: hidden
 }
 
-.showcase-item:hover {
+.offer-item{
+    width: 33%;
+    padding: 0 10px;
+    overflow: hidden;
+    position: relative;
+}
+.banner {
+    padding:0
+    overflow: hidden;
+    width: 100%;
+    height: 311px;
+    z-index: -1;
+}
+
+.banner:hover {
     transform: scale(1.1);
 }
+
+.banner-text{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+    text-shadow: gray;
+}
+.banner-text a{
+    text-decoration: underline;
+    color: black;
+    font-size: 24px;
+}
+.banner-text a:hover{
+    color: #ff7d95
+}
+
 
 .featured-pricing {
     padding: 0;
