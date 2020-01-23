@@ -39,3 +39,10 @@ function becomeStickyLarge() {
   });
   });
   
+$(".featured-buttons").hover(function(){
+  $(this).addClass("active-button");
+},
+function(){
+  $(this).removeClass("active-button");
+}
+);
